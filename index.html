@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+    
+    <input type="text" id="display" disabled>
+    
+    <table>
+        <tr>
+            <td><button onclick="document.getElementById('display').value += '1'">1</button></td>
+            <td><button onclick="document.getElementById('display').value += '2'">2</button></td>
+            <td><button onclick="document.getElementById('display').value += '3'">3</button></td>
+            <td><button onclick="document.getElementById('display').value += '+'">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="document.getElementById('display').value += '4'">4</button></td>
+            <td><button onclick="document.getElementById('display').value += '5'">5</button></td>
+            <td><button onclick="document.getElementById('display').value += '6'">6</button></td>
+            <td><button onclick="document.getElementById('display').value += '-'">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="document.getElementById('display').value += '7'">7</button></td>
+            <td><button onclick="document.getElementById('display').value += '8'">8</button></td>
+            <td><button onclick="document.getElementById('display').value += '9'">9</button></td>
+            <td><button onclick="document.getElementById('display').value += '*'">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="document.getElementById('display').value += '0'">0</button></td>
+            <td><button onclick="document.getElementById('display').value += '.'">.</button></td>
+            <td><button onclick="document.getElementById('display').value = ''">C</button></td>
+            <td><button onclick="document.getElementById('display').value += '/'">/</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><button onclick="try { document.getElementById('display').value = eval(document.getElementById('display').value); } catch (error) { document.getElementById('display').value = 'Error'; }">=</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>
